@@ -179,7 +179,7 @@ styles.31d6cfe0d16ae931b73c.css   | styles        |   0 bytes
 Build at: 2021-09-23T01:22:35.870Z - Hash: 3a09fd924c26cb02fafc - Time: 13654ms
 ```
 
-**6.** Create the `.github/workflows/gh-pages.yml` file.
+**6.** Let's create and configure the file with the GitHub Actions flow. Create the `.github/workflows/gh-pages.yml` file.
 
 ```shell
 mkdir -p .github/workflows
