@@ -228,6 +228,8 @@ jobs:
 
 **8.** Syncronize the application on the GitHub repository that was created.
 
+![GitHub - Repository](docs/images/github-step8.png)
+
 **9.** Ready! After synchronizing the application on the GitHub repository, the GitHub Actions build the application and synchronize on the branch `gh-pages`. Access the URL [https://rodrigokamada.github.io/angular-github-actions/](https://rodrigokamada.github.io/angular-github-actions/) and check if the application is working. Replace the `rodrigokamada` value with your GitHub username.
 
 
