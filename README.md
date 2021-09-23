@@ -97,7 +97,7 @@ CREATE angular-github-actions/src/app/app.component.ts (227 bytes)
 **2.** Change the `package.json` file and add the scripts below. Replace the `rodrigokamada` value with your GitHub username.
 
 ```json
-  "build:prod": "ng build --prod --base-href https://rodrigokamada.github.io/angular-github-actions/",
+  "build:prod": "ng build --configuration production --base-href https://rodrigokamada.github.io/angular-github-actions/",
   "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
 ```
 
@@ -162,9 +162,8 @@ Build at: 2021-09-22T23:51:24.809Z - Hash: 491013c58e91631f6f14 - Time: 10491ms
 npm run build:prod
 
 > angular-github-actions@1.0.0 build:prod
-> ng build --prod --base-href https://rodrigokamada.github.io/angular-github-actions/
+> ng build --configuration production --base-href https://rodrigokamada.github.io/angular-github-actions/
 
-Option "--prod" is deprecated: No need to use this option as this builder defaults to configuration "production".
 ✔ Browser application bundle generation complete.
 ✔ Copying assets complete.
 ✔ Index html generation complete.
@@ -177,7 +176,7 @@ styles.31d6cfe0d16ae931b73c.css   | styles        |   0 bytes
 
                                   | Initial Total | 252.37 kB
 
-Build at: 2021-09-22T23:52:55.053Z - Hash: 3a09fd924c26cb02fafc - Time: 19181ms
+Build at: 2021-09-23T01:22:35.870Z - Hash: 3a09fd924c26cb02fafc - Time: 13654ms
 ```
 
 **6.** Create the `.github/workflows/gh-pages.yml` file.
@@ -230,6 +229,11 @@ jobs:
 **8.** Syncronize the application on the GitHub repository that was created.
 
 **9.** Ready! After synchronizing the application on the GitHub repository, the GitHub Actions build the application and synchronize on the branch `gh-pages`. Access the URL `https://rodrigokamada.github.io/angular-github-actions/` and check if the application is working. Replace the `rodrigokamada` value with your GitHub username.
+
+
+### Validate the GitHub Actions flow execution
+
+
 
 
 
