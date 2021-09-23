@@ -228,12 +228,28 @@ jobs:
 
 **8.** Syncronize the application on the GitHub repository that was created.
 
-**9.** Ready! After synchronizing the application on the GitHub repository, the GitHub Actions build the application and synchronize on the branch `gh-pages`. Access the URL `https://rodrigokamada.github.io/angular-github-actions/` and check if the application is working. Replace the `rodrigokamada` value with your GitHub username.
+**9.** Ready! After synchronizing the application on the GitHub repository, the GitHub Actions build the application and synchronize on the branch `gh-pages`. Access the URL [https://rodrigokamada.github.io/angular-github-actions/](https://rodrigokamada.github.io/angular-github-actions/) and check if the application is working. Replace the `rodrigokamada` value with your GitHub username.
 
 
-### Validate the GitHub Actions flow execution
+### Validate the run of the GitHub Actions flow
 
+**1.** Let's validate the run of the GitHub Actions flow. Access the repository [https://github.com/rodrigokamada/angular-github-actions](https://github.com/rodrigokamada/angular-github-actions) created and click on the link *Actions*.
 
+![GitHub Actions - Repository](docs/images/github-actions-step1.png)
+
+**2.** Click on the flow runned.
+
+![GitHub Actions - Workflows](docs/images/github-actions-step2.png)
+
+**3.** Click on the job *deploy*.
+
+![GitHub Actions - Jobs](docs/images/github-actions-step3.png)
+
+**4.** Click on each step to validate the run.
+
+![GitHub Actions - Steps](docs/images/github-actions-step4.png)
+
+**5.** Ready! We validate the run of the GitHub Actions flow.
 
 
 
