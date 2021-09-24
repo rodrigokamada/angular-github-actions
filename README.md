@@ -226,6 +226,10 @@ jobs:
         enable_jekyll: true
 ```
 
+Note:
+
+* The documentation for the configuration file is available at [https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions).
+
 **8.** Syncronize the application on the GitHub repository that was created.
 
 ![GitHub - Repository](docs/images/github-step8.png)
