@@ -262,11 +262,11 @@ jobs:
 
 **2.** Click on the menu *Pages*.
 
-![GitHub Actions - Settings](docs/images/github-pages-step2.png)
+![GitHub Pages - Settings](docs/images/github-pages-step2.png)
 
 **3.** The message *Your site is published at https://rodrigokamada.github.io/angular-github-actions/* should be displayed.
 
-![GitHub Actions - Pages](docs/images/github-pages-step3.png)
+![GitHub Pages - Pages](docs/images/github-pages-step3.png)
 
 **4.** Ready! We validate the publish of the GitHub Pages.
 
