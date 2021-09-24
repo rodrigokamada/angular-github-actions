@@ -254,6 +254,23 @@ jobs:
 **5.** Ready! We validate the run of the GitHub Actions flow.
 
 
+### Validate the publish of the GitHub Pages
+
+**1.** Let's validate the publish of the GitHub Pages. Access the repository [https://github.com/rodrigokamada/angular-github-actions](https://github.com/rodrigokamada/angular-github-actions) created and click on the link *Settings*.
+
+![GitHub Pages - Repository](docs/images/github-pages-step1.png)
+
+**2.** Click on the menu *Pages*.
+
+![GitHub Actions - Settings](docs/images/github-pages-step2.png)
+
+**3.** The message *Your site is published at https://rodrigokamada.github.io/angular-github-actions/* should be displayed.
+
+![GitHub Actions - Pages](docs/images/github-pages-step3.png)
+
+**5.** Ready! We validate the publish of the GitHub Pages.
+
+
 
 ## Cloning the application
 
