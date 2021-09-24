@@ -268,7 +268,7 @@ jobs:
 
 ![GitHub Actions - Pages](docs/images/github-pages-step3.png)
 
-**5.** Ready! We validate the publish of the GitHub Pages.
+**4.** Ready! We validate the publish of the GitHub Pages.
 
 
 
