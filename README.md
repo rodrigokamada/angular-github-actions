@@ -1,15 +1,15 @@
 # Angular Github Actions
 
 
-Application example built with [Angular 12](https://angular.io/) and hosted on [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/actions).
+Application example built with [Angular 13](https://angular.io/) and hosted on [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/actions).
 
 This tutorial was posted on my [blog](https://rodrigo.kamada.com.br/blog/hospedando-uma-aplicacao-angular-no-github-pages-usando-o-github-actions) in portuguese and on the [DEV Community](https://dev.to/rodrigokamada/hosting-an-angular-application-on-github-pages-using-github-actions-5ag8) in english.
 
 
 
-[![Website](https://shields.braskam.com/v1/shields?name=website&format=rectangle&size=small)](https://rodrigo.kamada.com.br)
-[![LinkedIn](https://shields.braskam.com/v1/shields?name=linkedin&format=rectangle&size=small)](https://www.linkedin.com/in/rodrigokamada)
-[![Twitter](https://shields.braskam.com/v1/shields?name=twitter&format=rectangle&size=small&socialAccount=rodrigokamada)](https://twitter.com/rodrigokamada)
+[![Website](https://shields.braskam.com/v1/shields?name=website&format=rectangle&size=small&radius=5)](https://rodrigo.kamada.com.br)
+[![LinkedIn](https://shields.braskam.com/v1/shields?name=linkedin&format=rectangle&size=small&radius=5)](https://www.linkedin.com/in/rodrigokamada)
+[![Twitter](https://shields.braskam.com/v1/shields?name=twitter&format=rectangle&size=small&radius=5&socialAccount=rodrigokamada)](https://twitter.com/rodrigokamada)
 
 
 
@@ -33,27 +33,27 @@ Before you start, you need to install and configure the tools:
 
 **1.** Let's create the account. Access the site [https://github.com/](https://github.com/) and click on the button *Sign up*.
 
-![GitHub - Initial page](docs/images/github-step1.png)
+![GitHub - Home page](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776745/Blog/angular-github-actions/github-step1.png)
 
 **2.** Fill in the fields *Username*, *Email address*, *Password*, click on the button *Verify* to solve the challenge and click on the button *Create account*.
 
-![GitHub - Sign up](docs/images/github-step2.png)
+![GitHub - Sign up](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776745/Blog/angular-github-actions/github-step2.png)
 
 **3.** Let's create the repository. Click on the menu with the avatar and click on the menu *Your repositories*.
 
-![GitHub - Menu Your repositories](docs/images/github-step3.png)
+![GitHub - Menu Your repositories](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776745/Blog/angular-github-actions/github-step3.png)
 
 **4.** Click on the button *New*.
 
-![GitHub - New repository](docs/images/github-step4.png)
+![GitHub - New repository](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776745/Blog/angular-github-actions/github-step4.png)
 
 **5.** Fill in the field *Repository name* and click on the button *Create repository*.
 
-![GitHub - Create repository](docs/images/github-step5.png)
+![GitHub - Create repository](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776746/Blog/angular-github-actions/github-step5.png)
 
 **6.** Ready! Account created and repository [`https://github.com/rodrigokamada/angular-github-actions`](https://github.com/rodrigokamada/angular-github-actions) created.
 
-![GitHub - Repository created](docs/images/github-step6.png)
+![GitHub - Repository created](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776746/Blog/angular-github-actions/github-step6.png)
 
 
 ### Create the Angular application
@@ -232,7 +232,7 @@ Note:
 
 **8.** Syncronize the application on the GitHub repository that was created.
 
-![GitHub - Repository](docs/images/github-step8.png)
+![GitHub - Repository](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776746/Blog/angular-github-actions/github-step8.png)
 
 **9.** Ready! After synchronizing the application on the GitHub repository, the GitHub Actions build the application and synchronize on the branch `gh-pages`. Access the URL [https://rodrigokamada.github.io/angular-github-actions/](https://rodrigokamada.github.io/angular-github-actions/) and check if the application is working. Replace the `rodrigokamada` value with your GitHub username.
 
@@ -241,19 +241,19 @@ Note:
 
 **1.** Let's validate the run of the GitHub Actions flow. Access the repository [https://github.com/rodrigokamada/angular-github-actions](https://github.com/rodrigokamada/angular-github-actions) created and click on the link *Actions*.
 
-![GitHub Actions - Repository](docs/images/github-actions-step1.png)
+![GitHub Actions - Repository](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776744/Blog/angular-github-actions/github-actions-step1.png)
 
 **2.** Click on the flow runned.
 
-![GitHub Actions - Workflows](docs/images/github-actions-step2.png)
+![GitHub Actions - Workflows](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776744/Blog/angular-github-actions/github-actions-step2.png)
 
 **3.** Click on the job *deploy*.
 
-![GitHub Actions - Jobs](docs/images/github-actions-step3.png)
+![GitHub Actions - Jobs](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776744/Blog/angular-github-actions/github-actions-step3.png)
 
 **4.** Click on each step to validate the run.
 
-![GitHub Actions - Steps](docs/images/github-actions-step4.png)
+![GitHub Actions - Steps](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776744/Blog/angular-github-actions/github-actions-step4.png)
 
 **5.** Ready! We validate the run of the GitHub Actions flow.
 
@@ -262,15 +262,15 @@ Note:
 
 **1.** Let's validate the publish of the GitHub Pages. Access the repository [https://github.com/rodrigokamada/angular-github-actions](https://github.com/rodrigokamada/angular-github-actions) created and click on the link *Settings*.
 
-![GitHub Pages - Repository](docs/images/github-pages-step1.png)
+![GitHub Pages - Repository](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776744/Blog/angular-github-actions/github-pages-step1.png)
 
 **2.** Click on the menu *Pages*.
 
-![GitHub Pages - Settings](docs/images/github-pages-step2.png)
+![GitHub Pages - Settings](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776744/Blog/angular-github-actions/github-pages-step2.png)
 
 **3.** The message *Your site is published at https://rodrigokamada.github.io/angular-github-actions/* should be displayed.
 
-![GitHub Pages - Pages](docs/images/github-pages-step3.png)
+![GitHub Pages - Pages](https://res.cloudinary.com/rodrigokamada/image/upload/v1637776745/Blog/angular-github-actions/github-pages-step3.png)
 
 **4.** Ready! We validate the publish of the GitHub Pages.
 
