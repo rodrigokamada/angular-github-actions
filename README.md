@@ -1,7 +1,7 @@
 # Angular Github Actions
 
 
-Application example built with [Angular 13](https://angular.io/) and hosted on [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/actions).
+Application example built with [Angular](https://angular.io/) 13 and hosted on [GitHub Pages](https://pages.github.com/) using [GitHub Actions](https://github.com/actions).
 
 This tutorial was posted on my [blog](https://rodrigo.kamada.com.br/blog/hospedando-uma-aplicacao-angular-no-github-pages-usando-o-github-actions) in portuguese and on the [DEV Community](https://dev.to/rodrigokamada/hosting-an-angular-application-on-github-pages-using-github-actions-5ag8) in english.
 
