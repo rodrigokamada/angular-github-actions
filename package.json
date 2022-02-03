@@ -1,6 +1,7 @@
 {
   "name": "angular-github-actions",
   "version": "1.0.0",
+  "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
   "license": "MIT",
   "private": true,
   "scripts": {
