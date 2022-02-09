@@ -1,6 +1,7 @@
 {
   "name": "angular-github-actions",
   "version": "1.0.0",
+  "description": "Application example built with Angular 13 and hosted on GitHub Pages using GitHub Actions.",
   "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
   "license": "MIT",
   "private": true,
