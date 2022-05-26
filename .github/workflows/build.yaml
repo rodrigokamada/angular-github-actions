@@ -19,13 +19,10 @@ jobs:
 
     - name: Install dependencies
       run: |
+          npm install -g @angular/cli
           cd user
           npm i
-
-    - name: Run tests
-      run: npm run test:headless
-
-    - name: Build
-      run: npm run build:prod
+          npm run test:headless
+          npm run build:prod
 
     
