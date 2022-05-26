@@ -22,11 +22,4 @@ jobs:
           npm i
           npm run test:headless
           npm run build:prod
-          uses: actions/checkout@v2
-          - name: List Files in Distribution Directory
-          ls -R ./dist
           
-      
-  
-  
-    
