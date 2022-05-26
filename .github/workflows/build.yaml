@@ -18,7 +18,6 @@ jobs:
         node-version: 14
     - name: Install dependencies
       run: |
-          cd user
           npm install -g @angular/cli
           npm i
           npm run test:headless
@@ -30,7 +29,7 @@ jobs:
     - name: Copy folder content recursively to remote
       uses: garygrossgarten/github-action-scp@release
       with:
-          local: dist/angular-github-actions
+          local: dist
           remote: ${{ secrets.SSH_PATH }}
           host: ${{ secrets.SERVER }}
           port: ${{ secrets.SSH_PORT }}
