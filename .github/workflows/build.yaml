@@ -22,7 +22,6 @@ jobs:
           npm i
           npm run test:headless
           npm run build:prod
-          steps:
     - name: checkout
       uses: actions/checkout@v2
           
