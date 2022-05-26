@@ -22,10 +22,10 @@ jobs:
           npm i
           npm run test:headless
           npm run build:prod
+          - name: Checkout
+           uses: actions/checkout@v2
           - name: copy file via ssh key
           uses: appleboy/scp-action@master
-    
-env:
           HOST:  ${{ secrets.HOST }}
           USERNAME:  ${{ secrets.USERNAME }}
           PORT:  ${{ secrets.PORT }}
