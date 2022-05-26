@@ -22,17 +22,8 @@ jobs:
           npm i
           npm run test:headless
           npm run build:prod
-    - name: checkout
-      uses: actions/checkout@v2
-          
-    - name: Copy folder content recursively to remote
-      uses: garygrossgarten/github-action-scp@release
-      with:
-          local: .dist/
-          host: ${{ secrets.SERVER }}
-          port: ${{ secrets.SSH_PORT }}
-          username: ${{ secrets.SSH_USER }}
-          privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+          - name: List Files in Distribution Directory
+            run: ls -R ./dist
           
       
   
