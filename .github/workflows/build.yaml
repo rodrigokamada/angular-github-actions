@@ -23,11 +23,10 @@ jobs:
           npm i
           npm run test:headless
           npm run build:prod
-        - uses: actions/checkout@v2 
-      - name: copy file via ssh key
+          - name: deploy
       uses: garygrossgarten/github-action-scp@release
         with:
-          local: dist/angular-github-actions
+         local: dist/angular-github-actions
           remote: ${{ secrets.SSH_PATH }}
           host: ${{ secrets.SERVER }}
           port: ${{ secrets.SSH_PORT }}
