@@ -23,13 +23,18 @@ jobs:
           npm i
           npm run test:headless
           npm run build:prod
-          - name: deploy
+          
+    - name: Copy folder content recursively to remote
       uses: garygrossgarten/github-action-scp@release
-        with:
-         local: dist/angular-github-actions
+      with:
+          local: dist/angular-github-actions
           remote: ${{ secrets.SSH_PATH }}
           host: ${{ secrets.SERVER }}
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
           privateKey: ${{ secrets.SSH_PRIVATE_KEY }}
+          
+      
+  
+  
     
