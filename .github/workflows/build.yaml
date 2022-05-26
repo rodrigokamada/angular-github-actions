@@ -19,6 +19,7 @@ jobs:
 
     - name: Install dependencies
       run: |
+          cd user
           npm install -g @angular/cli
           npm i
           npm run test:headless
