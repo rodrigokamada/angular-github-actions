@@ -23,6 +23,9 @@ jobs:
           npm i
           npm run test:headless
           npm run build:prod
+          steps:
+    - name: checkout
+      uses: actions/checkout@v2
           
     - name: Copy folder content recursively to remote
       uses: garygrossgarten/github-action-scp@release
