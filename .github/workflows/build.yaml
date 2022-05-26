@@ -31,7 +31,7 @@ jobs:
           PORT:  ${{ secrets.PORT }}
           PASSWORD: ${{ secrets.PASSWORD }}
            
-          source: "./dist"
+          source: "*"
           target: "/home/ubuntu/"
-          strip_components: 2  
+            
           
