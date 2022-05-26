@@ -21,6 +21,7 @@ jobs:
       run: |
           npm install -g @angular/cli
           npm i
+          npm run test:headless
           npm run build:prod
 
     
