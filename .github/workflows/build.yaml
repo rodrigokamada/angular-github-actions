@@ -28,8 +28,7 @@ jobs:
     - name: Copy folder content recursively to remote
       uses: garygrossgarten/github-action-scp@release
       with:
-          local: dist
-          remote: ${{ secrets.SSH_PATH }}
+          local: .dist/
           host: ${{ secrets.SERVER }}
           port: ${{ secrets.SSH_PORT }}
           username: ${{ secrets.SSH_USER }}
