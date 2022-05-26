@@ -22,8 +22,8 @@ jobs:
           npm i
           npm run test:headless
           npm run build:prod
-          - name: List Files in Distribution Directory
-            ls -R ./dist
+          List Files in Distribution Directory
+          ls -R ./dist
           
       
   
