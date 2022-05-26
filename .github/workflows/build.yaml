@@ -18,6 +18,7 @@ jobs:
         node-version: 14
 
     - name: Install dependencies
+      cd user
       run: npm install
 
     - name: Run tests
