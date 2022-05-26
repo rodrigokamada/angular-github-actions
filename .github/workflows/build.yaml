@@ -18,8 +18,9 @@ jobs:
         node-version: 14
 
     - name: Install dependencies
-      cd user
-      run: npm install
+      run: |
+          cd user
+          npm i
 
     - name: Run tests
       run: npm run test:headless
