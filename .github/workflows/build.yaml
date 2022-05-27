@@ -19,17 +19,10 @@ jobs:
     - name: Install dependencies
       run: |
           npm install -g @angular/cli
+          cd user
           npm i
           npm run test:headless
           npm run build:prod
-          - name: Deploy to my EC2 instance
-          uses: easingthemes/ssh-deploy@v2.1.5
-          env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          SOURCE: "./"
-          REMOTE_HOST: "ec2-3-108-184-129.ap-south-1.compute.amazonaws.com"
-          REMOTE_USER: "ubuntu"
-          TARGET: "/home/ubuntu/"
 
    
           
