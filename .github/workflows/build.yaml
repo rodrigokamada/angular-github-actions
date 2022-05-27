@@ -17,8 +17,8 @@ jobs:
         node-version: 14
     - name: Install dependencies
       run: |
-           cd user
            npm install -g @angular/cli
+           cd user
            npm i
            npm run test:headless
            npm run build:prod
