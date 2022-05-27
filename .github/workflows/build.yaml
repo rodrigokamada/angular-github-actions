@@ -8,6 +8,15 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
+    - name: Deploy
+      uses: garygrossgarten/github-action-scp@release
+      with:
+        local: ./dist/angular-github-actions
+        remote: ${{ secrets.TARGET_DIR }}
+        host: ${{ secrets.HOST_DNS }}
+        port: ${{ secrets.PORT }}
+        username: ${{ secrets.USERNAME }}
+        privateKey: ${{ secrets.EC2_SSH_KEY }}
 
     - name: Checkout
       uses: actions/checkout@v2
@@ -22,15 +31,7 @@ jobs:
            npm i
            npm run build:prod
            ls -la
-    - name: Deploy
-      uses: garygrossgarten/github-action-scp@release
-      with:
-        local: ./dist/angular-github-actions
-        remote: ${{ secrets.TARGET_DIR }}
-        host: ${{ secrets.HOST_DNS }}
-        port: ${{ secrets.PORT }}
-        username: ${{ secrets.USERNAME }}
-        privateKey: ${{ secrets.EC2_SSH_KEY }}
+    
            
               
            
