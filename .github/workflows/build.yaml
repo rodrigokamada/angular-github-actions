@@ -21,6 +21,16 @@ jobs:
            npm i
            npm run test:headless
            npm run build:prod
+           - name: Deploy to Server 1
+              uses: easingthemes/ssh-deploy@main
+           env:
+           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+           REMOTE_HOST: ${{ secrets.HOST_DNS }}
+           REMOTE_USER: ${{ secrets.USERNAME }}
+           with:
+            source: "dist/angular-github-actions/*"
+            TARGET: ${{ secrets.TARGET_DIR }}
+
            
 
    
