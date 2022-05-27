@@ -27,7 +27,7 @@ jobs:
         host: ${{ secrets.HOST_DNS }}
         port: ${{ secrets.PORT }}
         username: ${{ secrets.USERNAME }}
-        privateKey: ${{ secrets.EC2_SSH_KEY }}
+        password: ${{ secrets.PASSWORD }}
       with:
         source: "./dist/angular-github-actions"
         target: "/home/ubuntu"
