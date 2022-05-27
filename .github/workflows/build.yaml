@@ -23,12 +23,11 @@ jobs:
            ls -la
     - name: copy file via ssh key
       uses: appleboy/scp-action@master
-      env:
-        host: ${{ secrets.HOST_DNS }}
-        port: ${{ secrets.PORT }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
       with:
+        host: ${{ secrets.HOST_DNS }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
         source: "./dist/angular-github-actions"
         target: "/home/ubuntu"
         strip_components: 3 # this is important
