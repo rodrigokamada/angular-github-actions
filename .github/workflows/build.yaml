@@ -1,5 +1,4 @@
 name: GitHub Pages
-
 on:
   push:
     branches:
@@ -18,7 +17,6 @@ jobs:
         node-version: 14
     - name: Install dependencies
       run: |
-
            cd user
            npm install -g @angular/cli
            npm i
