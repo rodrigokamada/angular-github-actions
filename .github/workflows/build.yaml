@@ -28,7 +28,9 @@ jobs:
            npm i
            npm run build:prod
            ls -la
-             - name: Deploy
+    - name: Deploy
+      run: |
+    
            aws s3 sync ./dist/angular-github-actions s3://my-bucket-2022-01
            
               
