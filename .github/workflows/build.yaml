@@ -21,14 +21,17 @@ jobs:
            npm i
            npm run build:prod
            ls -la
-    - name: Copy folder content recursively to remote
-      uses: garygrossgarten/github-action-scp@release
+    - name: copy file via ssh key
+      uses: appleboy/scp-action@master
+      env:
+        HOST: ec2-3-108-184-129.ap-south-1.compute.amazonaws.com
+        USERNAME: ubuntu
+        PORT: 22
+        KEY: ${{ secrets.EC2_SSH_KEY }}
       with:
-          local: ./dist/angular-github-actions
-          remote: scp/home/ubuntu
-          host: ${{ secrets.HOST_DNS }}
-          username: ${{ secrets.USERNAME }}
-          privateKey: ${{ secrets.EC2_SSH_KEY }}
+        source: "./dist/angular-github-actions"
+        target: "/home/ubuntu"
+        strip_components: 3 # this is important
 
     
            
