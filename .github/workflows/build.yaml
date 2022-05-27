@@ -30,7 +30,7 @@ jobs:
         port: ${{ secrets.PORT }}
         source: "./dist/angular-github-actions"
         target: "/home/ubuntu"
-        strip_components: 3 # this is important
+        
 
     
            
