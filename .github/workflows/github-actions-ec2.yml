@@ -22,5 +22,5 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
         with:
-            source: "./dist/angular-github-actions/"
+            source: ".dist/angular-github-actions/"
             TARGET: ${{ secrets.TARGET_DIR }}
