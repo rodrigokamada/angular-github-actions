@@ -18,6 +18,7 @@ jobs:
     - name: Install dependencies
       run: |
            npm install -g @angular/cli
+           cd user
            npm i
            npm run build:prod
            ls -la
