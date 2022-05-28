@@ -21,14 +21,15 @@ jobs:
            npm i
            npm run build:prod
            ls -la
-    - name: Deploy to Server 
-  uses: easingthemes/ssh-deploy@main
-  env:
-    SSH_PRIVATE_KEY: ${ { secrets.KEY }}
-    REMOTE_HOST: ${ { secrets.HOST_DNS }}
-    REMOTE_USER: ${ { secrets.USERNAME }}
-    TARGET: ${ { secrets.TARGET_DIR }}
-    source: "./dist/angular-github-actions"
+    - name: Deploy to Server
+      uses: easingthemes/ssh-deploy@main
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          ARGS: "-rltgoDzvO --delete"
+          SOURCE: "dist/"
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.TARGET_DIR }}
     
 
            
