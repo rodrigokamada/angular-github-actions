@@ -21,7 +21,7 @@ jobs:
            npm i
            npm run build:prod
            ls -la
-    - name: Deploy to Servers
+    - name: Deploy to Server
       uses: easingthemes/ssh-deploy@main
       env:
           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
