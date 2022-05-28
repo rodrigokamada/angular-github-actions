@@ -20,6 +20,7 @@ jobs:
            npm install -g @angular/cli
            mkdir user
            cd user
+           ls -la
            npm i
            npm run build:prod
            ls -la
