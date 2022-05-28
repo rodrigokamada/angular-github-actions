@@ -24,11 +24,16 @@ jobs:
            npm i
            npm run build:prod
            ls -la
+    - name: zipping
+      uses: papeloto/action-zip@v1
+      with:
+          files: dist/user
+          dest: user.zip
     - name: Deploy to Servers
       uses: easingthemes/ssh-deploy@main
       env:
           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
-          SOURCE: "./dist/"
+          SOURCE: "user.zip"
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
