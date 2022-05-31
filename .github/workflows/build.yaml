@@ -29,14 +29,17 @@ jobs:
       with:
           files: dist/user
           dest: user.zip
-    - name: Approved/Deny
-      uses: trstringer/manual-approval@v1
-      with:
-        secret: ${{ github.TOKEN }}
-        approvers: yaswanth507
-    - name: Deploy to Servers
-      uses: easingthemes/ssh-deploy@main
-      env:
+    name: Team awesome's approval workflow
+  labelWhenApproved:
+    runs-on: ubuntu-latest
+    env:
+       - name: label_step
+         uses: pullreminders/label-when-approved-action
+         APPROVALS: 1
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+       - name: Deploy to Servers
+         uses: easingthemes/ssh-deploy@main
+          env:
           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
           SOURCE: "user.zip"
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
