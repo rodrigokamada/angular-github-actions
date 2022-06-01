@@ -4,7 +4,7 @@ on:
     inputs:
       input:
         description: "Test"
-        required: false
+        required: true
         default: "World"
   push:
     branches:
