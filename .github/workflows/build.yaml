@@ -36,6 +36,7 @@ jobs:
           SOURCE: "user.zip"
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
+          run: touch yashu
           TARGET: ${{ secrets.TARGET_DIR }}
-          run: touch yash
+          
     
