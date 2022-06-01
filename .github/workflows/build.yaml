@@ -1,5 +1,11 @@
 name: GitHub Pages
 on:
+  workflow_dispatch:
+    inputs:
+      input:
+        description: "Test"
+        required: false
+        default: "World"
   push:
     branches:
     - v3.6
