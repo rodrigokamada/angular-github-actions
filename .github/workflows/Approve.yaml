@@ -1,0 +1,10 @@
+name: GitHub Pages
+on:
+  push:
+    branches:
+    - v3.6
+    - name: Approve/Deny
+      uses: trstringer/manual-approval@v1
+      with:
+        secret: ${{ github.TOKEN }}
+        approvers: yaswanth507
