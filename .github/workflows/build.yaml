@@ -3,6 +3,15 @@ on:
   push:
     branches:
     - v3.6
+ 
+      name: ApproveOps - ApproveOps in IssueOps
+       uses: joshjohanning/approveops@v1
+  id: check-approval
+  with:
+    app-id: 170284
+    app-private-key: ${{ secrets.PRIVATE_KEY }}
+    team-name: approver-team
+    fail-if-approval-not-found: false
 
 jobs:
   deploy:
@@ -29,16 +38,4 @@ jobs:
       with:
           files: dist/user
           dest: user.zip
-    - name: Approved/Deny
-      uses: trstringer/manual-approval@v1
-      with:
-        secret: ${{ github.TOKEN }}
-        approvers: yaswanth507
-    - name: Deploy to Servers
-      uses: easingthemes/ssh-deploy@main
-      env:
-          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
-          SOURCE: "user.zip"
-          REMOTE_HOST: ${{ secrets.HOST_DNS }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET_DIR }}
+    
