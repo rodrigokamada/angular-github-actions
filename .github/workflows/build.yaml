@@ -1,19 +1,27 @@
-name: GitHub Pages
+name: Approve Ops
 on:
-  push:
-    branches:
-    - v3.6
- 
-      name: ApproveOps - ApproveOps in IssueOps
-       uses: joshjohanning/approveops@v1
-  id: check-approval
-  with:
-    app-id: 170284
-    app-private-key: ${{ secrets.PRIVATE_KEY }}
-    team-name: approver-team
-    fail-if-approval-not-found: false
+  issue_comment:
+    types: [created, edited]
 
 jobs:
+  approveops:
+    runs-on: ubuntu-latest
+    if: contains(github.event.comment.body, '/run-migration')
+    # optional - if we want to use the output to determine if we run the migration job or not
+    outputs: 
+      approved: ${{ steps.check-approval.outputs.approved }}
+
+    steps:
+      - name: ApproveOps - ApproveOps in IssueOps
+        uses: joshjohanning/ApproveOps@v1
+        id: check-approval
+        with:
+          app-id: 170284
+          app-private-key: ${{ secrets.PRIVATE_KEY }}
+          team-name: approver-team
+          fail-if-approval-not-found: false
+
+
   deploy:
     runs-on: ubuntu-latest
     steps:
