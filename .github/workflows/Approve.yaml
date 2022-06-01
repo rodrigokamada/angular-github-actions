@@ -1,10 +1,16 @@
-name: GitHub Pages
+name: Aprrove
 on:
-  push:
+   push:
     branches:
     - v3.6
-    - name: Approve/Deny
-      uses: trstringer/manual-approval@v1
-      with:
-        secret: ${{ github.TOKEN }}
-        approvers: yaswanth507
+   pull_request_review:
+    types: [submitted, edited, dismissed]
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Dump GitHub context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo ${{github.event.review.state }}
