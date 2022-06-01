@@ -18,7 +18,7 @@ jobs:
         with:
           app-id: 206651
           app-private-key: ${{ secrets.PRIVATE_KEY }}
-          team-name: approver-team
+          team-name: approver-teams
           fail-if-approval-not-found: false
 
 
