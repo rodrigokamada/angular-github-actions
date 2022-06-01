@@ -1,16 +1,13 @@
-name: Aprrove
-on:
-   push:
-    branches:
-    - v3.6
-   pull_request_review:
-    types: [submitted, edited, dismissed]
-
+name: Team awesome's approval workflow
+on: pull_request_review
 jobs:
-  job1:
+  labelWhenApproved:
     runs-on: ubuntu-latest
     steps:
-    - name: Dump GitHub context
+    - name: Label when approved
+      uses: pullreminders/label-when-approved-action@master
       env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: echo ${{github.event.review.state }}
+        APPROVALS: "1"
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ADD_LABEL: "approved"
+        REMOVE_LABEL: "awaiting%20review"
