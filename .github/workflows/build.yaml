@@ -41,7 +41,7 @@ jobs:
            npm i
            npm run build:prod
            ls -la
-    - name: zipping
+    - name: zippings
       uses: papeloto/action-zip@v1
       with:
           files: dist/user
