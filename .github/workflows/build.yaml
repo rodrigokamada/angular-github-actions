@@ -1,27 +1,10 @@
-name: Approve Ops
+name: GitHub Pages
 on:
-  issue_comment:
-    types: [created, edited]
+  push:
+    branches:
+    - v3.6
 
 jobs:
-  approveops:
-    runs-on: ubuntu-latest
-    if: contains(github.event.comment.body, '/run-migration')
-    # optional - if we want to use the output to determine if we run the migration job or not
-    outputs: 
-      approved: ${{ steps.check-approval.outputs.approved }}
-
-    steps:
-      - name: ApproveOps - ApproveOps in IssueOps
-        uses: joshjohanning/ApproveOps@v1
-        id: check-approval
-        with:
-          app-id: 206651
-          app-private-key: ${{ secrets.PRIVATE_KEY }}
-          team-name: approver-teams
-          fail-if-approval-not-found: false
-
-
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -46,6 +29,11 @@ jobs:
       with:
           files: dist/user
           dest: user.zip
+    - name: Approved/Deny
+      uses: trstringer/manual-approval@v1
+      with:
+        secret: ${{ github.TOKEN }}
+        approvers: yaswanth507
     - name: Deploy to Servers
       uses: easingthemes/ssh-deploy@main
       env:
@@ -54,7 +42,3 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
-          EXCLUDE: "/sam/"
-          
-          
-    
