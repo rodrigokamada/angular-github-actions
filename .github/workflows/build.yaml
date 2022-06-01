@@ -1,9 +1,9 @@
-name:  My First Manual Workflow
-on: [workflow_dispatch]
+name: GitHub Pages
+on:
+  push:
+    branches:
+    - v3.6
 
-#push:
-    #branches:
-    #- v3.6
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -29,20 +29,14 @@ jobs:
       with:
           files: dist/user
           dest: user.zip
-    
     - name: Deploy to Servers
       uses: easingthemes/ssh-deploy@main
-      with:
+      env:
           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
           SOURCE: "user.zip"
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
-    
-
-           
-              
-           
-
-   
-          
+    - name: bkp operations
+      run: |
+          touch yas
