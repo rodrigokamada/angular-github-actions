@@ -37,13 +37,14 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
-    - name: Install SSH Key
-      uses: shimataro/ssh-key-action@v2.1.0
+    - name: executing remote ssh commands using ssh key
+      uses: appleboy/ssh-action@master
       with:
-        key: $ { { secrets.KEY } }
-        known_hosts: $ { { secrets.KNOWN_HOSTS } }      
-    - name: Execute test Script
-      run: ssh ubuntu@3.108.184.129 bash scp.sh
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: sh scp.sh
     
 
            
