@@ -43,7 +43,7 @@ jobs:
         host: ${{ secrets.HOST_DNS }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEY }}
-        script: sh scp.sh
+        script: scp.sh
         
     
 
