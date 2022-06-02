@@ -38,7 +38,7 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
     - name: Scripts
-      run: sh scp.sh
+      run: ls -la
 
            
               
