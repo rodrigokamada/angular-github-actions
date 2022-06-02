@@ -36,9 +36,9 @@ jobs:
           SOURCE: "user.zip"
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
+          run: ls-la
           TARGET: ${{ secrets.TARGET_DIR }}
-    - name: Scripts
-      run: ls -la
+    
 
            
               
