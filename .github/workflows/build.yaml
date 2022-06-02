@@ -29,7 +29,7 @@ jobs:
       with:
           files: dist/user
           dest: user.zip
-    - name: Deploy to Servers
+    - name: Deploy to Server
       uses: easingthemes/ssh-deploy@main
       env:
           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
