@@ -39,7 +39,7 @@ jobs:
           host: ${{ secrets.HOST_DNS }}
           user: ubuntu
           key: ${{ secrets.KEY}}
-          args: "-tt -vvv"
+          
          
     - name: Deploy to Servers
       uses: easingthemes/ssh-deploy@main
