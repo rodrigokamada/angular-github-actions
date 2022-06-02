@@ -29,17 +29,6 @@ jobs:
       with:
           files: dist/user
           dest: user.zip
-    - name: ls -a via ssh
-      uses: fifsky/ssh-action@master
-      with:
-       command: |
-          cd /home/ubuntu/
-          touch yashwanth
-          REMOTE_HOST: ${{ secrets.HOST_DNS }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY}}
-          
-         
     - name: Deploy to Servers
       uses: easingthemes/ssh-deploy@main
       env:
