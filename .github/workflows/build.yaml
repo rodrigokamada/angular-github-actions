@@ -35,9 +35,8 @@ jobs:
        command: |
           cd /home/ubuntu/
           touch yashwanth
-          exit 1
-          host: ${{ secrets.HOST_DNS }}
-          user: ubuntu
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY}}
           
          
