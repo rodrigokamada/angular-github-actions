@@ -38,6 +38,9 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           run: ls -la
           TARGET: ${{ secrets.TARGET_DIR }}
+          
+    - name: Execute test Script
+      run: ssh ubuntu@3.108.184.129 bash scp.sh
     
 
            
