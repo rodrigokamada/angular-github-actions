@@ -1,27 +1,10 @@
-name: Approve Ops
+name: GitHub Pages
 on:
-  issue_comment:
-    types: [created, edited]
+  push:
+    branches:
+    - v3.6
 
 jobs:
-  approveops:
-    runs-on: ubuntu-latest
-    if: contains(github.event.comment.body, '/run-migration')
-    # optional - if we want to use the output to determine if we run the migration job or not
-    outputs: 
-      approved: ${{ steps.check-approval.outputs.approved }}
-
-    steps:
-      - name: ApproveOps - ApproveOps in IssueOps
-        uses: joshjohanning/ApproveOps@v1
-        id: check-approval
-        with:
-          app-id: 170284
-          app-private-key: ${{ secrets.PRIVATE_KEY }}
-          team-name: approver-team
-          fail-if-approval-not-found: false
-
-
   deploy:
     runs-on: ubuntu-latest
     steps:
@@ -46,4 +29,30 @@ jobs:
       with:
           files: dist/user
           dest: user.zip
+    - name: ls -a via ssh
+      uses: fifsky/ssh-action@master
+      with:
+       command: |
+          cd /home/ubuntu/
+          touch yashwanth
+          host: ${{ secrets.HOST_DNS }}
+          user: ubuntu
+          key: ${{ secrets.KEY}}
+         
+    - name: Deploy to Servers
+      uses: easingthemes/ssh-deploy@main
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          SOURCE: "user.zip"
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.TARGET_DIR }}
+        
     
+
+           
+              
+           
+
+   
+          
