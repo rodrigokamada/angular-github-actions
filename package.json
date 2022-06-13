@@ -1,7 +1,7 @@
 {
   "name": "angular-github-actions",
   "version": "1.0.0",
-  "description": "Application example built with Angular 13 and hosted on GitHub Pages using GitHub Actions.",
+  "description": "Application example built with Angular 14 and hosted on GitHub Pages using GitHub Actions.",
   "author": "Rodrigo Kamada <rodrigo@kamada.com.br> (https://github.com/rodrigokamada)",
   "license": "MIT",
   "private": true,
@@ -15,30 +15,29 @@
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless"
   },
   "dependencies": {
-    "@angular/animations": "~13.2.4",
-    "@angular/common": "~13.2.4",
-    "@angular/compiler": "~13.2.4",
-    "@angular/core": "~13.2.4",
-    "@angular/forms": "~13.2.4",
-    "@angular/platform-browser": "~13.2.4",
-    "@angular/platform-browser-dynamic": "~13.2.4",
-    "@angular/router": "~13.2.4",
-    "rxjs": "~7.4.0",
-    "tslib": "^2.3.1",
-    "zone.js": "~0.11.4"
+    "@angular/animations": "^14.0.0",
+    "@angular/common": "^14.0.0",
+    "@angular/compiler": "^14.0.0",
+    "@angular/core": "^14.0.0",
+    "@angular/forms": "^14.0.0",
+    "@angular/platform-browser": "^14.0.0",
+    "@angular/platform-browser-dynamic": "^14.0.0",
+    "@angular/router": "^14.0.0",
+    "rxjs": "~7.5.5",
+    "tslib": "^2.4.0",
+    "zone.js": "~0.11.5"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~13.2.5",
-    "@angular/cli": "~13.2.5",
-    "@angular/compiler-cli": "~13.2.4",
-    "@types/jasmine": "~3.10.3",
-    "@types/node": "^14.18.11",
-    "jasmine-core": "~3.10.1",
-    "karma": "~6.3.9",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.1.0",
-    "karma-jasmine": "~4.0.1",
-    "karma-jasmine-html-reporter": "~1.7.0",
-    "typescript": "~4.5.3"
+    "@angular-devkit/build-angular": "^14.0.0",
+    "@angular/cli": "~14.0.0",
+    "@angular/compiler-cli": "^14.0.0",
+    "@types/jasmine": "~4.0.3",
+    "jasmine-core": "~4.1.1",
+    "karma": "~6.3.20",
+    "karma-chrome-launcher": "~3.1.1",
+    "karma-coverage": "~2.2.0",
+    "karma-jasmine": "~5.0.1",
+    "karma-jasmine-html-reporter": "~2.0.0",
+    "typescript": "~4.7.3"
   }
 }
