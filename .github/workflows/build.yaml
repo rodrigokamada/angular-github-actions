@@ -32,8 +32,27 @@ jobs:
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v2
       with:
-        name: deploy_dist
+        name: user
         path: user.zip
+        
+  deploy_to_dev:
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name != 'pull_request'
+    environment: Dev
+    steps:
+    - name: Download artifact from build job
+      uses: actions/download-artifact@v2
+      with:
+       name: user
+       uses: easingthemes/ssh-deploy@main
+    env:
+           SSH_PRIVATE_KEY: ${{ secrets.KEYS }}
+           SOURCE: "user"
+           REMOTE_HOST: ${{ secrets.HOST_DNS }}
+           REMOTE_USER: ${{ secrets.USERNAME }}
+           TARGET: ${{ secrets.TARGET_DIR }}
+        
     
 
     
