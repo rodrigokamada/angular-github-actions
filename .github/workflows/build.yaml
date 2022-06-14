@@ -43,8 +43,6 @@ jobs:
     if: github.event_name != 'pull_request'
     environment: Dev
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: Deploy to Server
         uses: easingthemes/ssh-deploy@main
         env:
