@@ -43,19 +43,19 @@ jobs:
     if: github.event_name != 'pull_request'
     environment: Dev
     steps:
-    - name: Checkout
-      uses: actions/checkout@v1
-    - name: Deploy to Server
-      uses: easingthemes/ssh-deploy@main
-      env:
+      - name: Checkout
+        uses: actions/checkout@v1
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        env:
           SSH_PRIVATE_KEY: ${{ secrets.KEYS }}
           SOURCE: "user.zip"
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
-    - name: unzipping files
-      uses: appleboy/ssh-action@master
-      with:
+      - name: unzipping files
+        uses: appleboy/ssh-action@master
+         with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
         key: ${{ secrets.KEYS }}
