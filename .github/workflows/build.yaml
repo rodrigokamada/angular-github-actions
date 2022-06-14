@@ -29,10 +29,11 @@ jobs:
       with:
           files: dist/user
           dest: user.zip
-    - name: Download a Deployment Zip
-      uses: actions/download-artifact@v2
+    - name: Upload artifact for deployment job
+      uses: actions/upload-artifact@v2
       with:
-        name: deployment_zip
+        name: deploy_dist
+        path: dist/user/user.zip
     
 
     
