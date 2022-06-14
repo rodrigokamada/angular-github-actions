@@ -47,7 +47,7 @@ jobs:
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@main
       env:
-          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.KEYS }}
           SOURCE: "user.zip"
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
@@ -70,7 +70,7 @@ jobs:
     - name: Deploy to Server
       uses: easingthemes/ssh-deploy@main
       env:
-          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          SSH_PRIVATE_KEY: ${{ secrets.KEYS }}
           SOURCE: "user.zip"
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
