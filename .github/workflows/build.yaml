@@ -30,7 +30,7 @@ jobs:
           files: dist/user
           dest: user.zip
     - name: listing
-      run: ls -la
+      run: pwd
     
 
     
