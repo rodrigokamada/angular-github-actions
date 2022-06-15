@@ -41,19 +41,14 @@ jobs:
     if: github.event_name != 'pull_request'
     environment: Dev
     steps:
-    - name: Download artifact from build job
-      uses: actions/download-artifact@v2
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Download build
+    - uses: actions/download-artifact@v3
       with:
        name: user
-       run: ls -la
-       uses: easingthemes/ssh-deploy@main
-    env:
-           SSH_PRIVATE_KEY: ${{ secrets.KEYS }}
-           SOURCE: "user.zip"
-           REMOTE_HOST: ${{ secrets.HOST_DNS }}
-           REMOTE_USER: ${{ secrets.USERNAME }}
-           TARGET: ${{ secrets.TARGET_DIR }}
-        
+    - name: Display structure of downloaded files
+      run: ls -R
     
 
     
