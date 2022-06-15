@@ -41,13 +41,14 @@ jobs:
     if: github.event_name != 'pull_request'
     environment: Dev
     steps:
-    - uses: actions/checkout@v2
-    - name: Download build
-    - uses: actions/download-artifact@v3
-      with:
-       name: user
-    - name: Display structure of downloaded files
-      run: ls -R
+     - name: checkout
+       uses: actions/checkout@v2
+     - name: Download build
+       uses: actions/download-artifact@v3
+       with:
+        name: user
+     - name: Display structure of downloaded files
+       run: ls -R
     
 
     
