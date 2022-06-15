@@ -46,14 +46,14 @@ jobs:
      - name: Download build
        uses: actions/download-artifact@v3
        with:
-        name: user
+        name: yash
      - name: Display structure of downloaded files
        run: ls -R
      - name: Deploy to Server
        uses: easingthemes/ssh-deploy@main
        env:
           SSH_PRIVATE_KEY: ${{ secrets.KEY }}
-          SOURCE: "user.zip"
+          SOURCE: "yash.zip"
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
