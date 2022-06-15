@@ -49,6 +49,14 @@ jobs:
         name: user
      - name: Display structure of downloaded files
        run: ls -R
+     - name: Deploy to Server
+       uses: easingthemes/ssh-deploy@main
+       env:
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          SOURCE: "user.zip"
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.TARGET_DIR }}
     
 
     
