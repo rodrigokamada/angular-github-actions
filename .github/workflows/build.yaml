@@ -45,6 +45,7 @@ jobs:
       uses: actions/download-artifact@v2
       with:
        name: user
+       run: ls -la
        uses: easingthemes/ssh-deploy@main
     env:
            SSH_PRIVATE_KEY: ${{ secrets.KEYS }}
