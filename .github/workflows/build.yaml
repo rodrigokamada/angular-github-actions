@@ -58,10 +58,35 @@ jobs:
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
           script: sh unzip.sh
-          
-  deploy_to_prod:
+  deploy_to_staging:
     runs-on: ubuntu-latest
     needs: deploy_to_dev
+    if: github.event_name != 'pull_request'
+    environment: Staging
+    steps:
+     - name: checkout
+       uses: actions/checkout@v2
+     - name: Download build
+       uses: actions/download-artifact@v3
+       with:
+        name: user
+     - name: Display structure of downloaded files
+       run: ls -R
+     - name: Deploy to Server
+       uses: easingthemes/ssh-deploy@main
+       env:
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          SOURCE: "user.zip"
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.STAG_DIR }}
+          script: sh unzip.sh
+  
+  
+  
+  deploy_to_prod:
+    runs-on: ubuntu-latest
+    needs: deploy_to_staging
     if: github.event_name != 'pull_request'
     environment: Prod
     steps:
