@@ -5,9 +5,8 @@ on:
     - v3.6
   workflow_dispatch:
 jobs:
-  ApproveBuilds :
+  Builds :
     runs-on: ubuntu-latest
-    if: github.event_name != 'pull_request'
     environment: build
   build:
     runs-on: ubuntu-latest
