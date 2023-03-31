@@ -27,6 +27,8 @@ jobs:
     - name: listing
       run: |
            ls -la
+           cd dist
+           ls -la
     - name: zipping
       uses: papeloto/action-zip@v1
       with:
