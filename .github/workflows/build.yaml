@@ -67,7 +67,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
-          script: sh unzip.sh
+          
   deploy_to_staging:
     runs-on: ubuntu-latest
     needs: deploy_to_dev
