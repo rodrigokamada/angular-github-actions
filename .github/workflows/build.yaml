@@ -1,4 +1,4 @@
-name: GitHub Page
+name: GitHub Pages
 on:
   push:
     branches:
