@@ -29,7 +29,7 @@ jobs:
            npm i
            npm run build:prod
            ls -la
-    - name: listings
+    - name: listing
       run: |
            ls -la
            cd dist
